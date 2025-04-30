@@ -1,5 +1,4 @@
-import express from "express";
-import Poll from "../model/Poll";
+import Poll from "../model/Poll.js";
 
 export const createPoll = async (req, res) => {
   const { title, description, options } = req.body;

@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import pollRoutes from './routes/pollRoutes.js'; // Import poll routes
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(cors(corsOptions)); // Use the CORS middleware with the specified option
 app.use(express.json());
 
 //routes
+app.use('/api/polls', pollRoutes); // Import poll routes
 
 
 app.get('/api', (req, res) => {
